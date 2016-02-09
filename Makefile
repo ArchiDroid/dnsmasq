@@ -24,8 +24,8 @@ MANDIR        = $(PREFIX)/share/man
 LOCALEDIR     = $(PREFIX)/share/locale
 BUILDDIR      = $(SRC)
 DESTDIR       = 
-CFLAGS        = -Wall -W -O2
-LDFLAGS       = 
+CFLAGS        = -Wall -W -O3 -march=armv7-a -mfpu=neon -mfloat-abi=softfp -fgcse-las -fgcse-sm -fipa-pta -fivopts -fomit-frame-pointer -frename-registers -fsection-anchors -ftree-loop-im -ftree-loop-ivcanon -funsafe-loop-optimizations -funswitch-loops -fweb -fgraphite -fgraphite-identity -floop-block -floop-interchange -floop-nest-optimize -floop-parallelize-all -floop-strip-mine -fmodulo-sched -fmodulo-sched-allow-regmoves -ffunction-sections -fdata-sections -fvisibility=hidden -s -fPIC -fPIE -pie -DNDEBUG -D__ANDROID__ -DANDROID --sysroot=/root/ndkTC/sysroot
+LDFLAGS       = -llog -Wl,-O3 -Wl,--as-needed -Wl,--relax -Wl,--sort-common -Wl,--gc-sections -fPIE -fPIC -pie
 COPTS         = 
 RPM_OPT_FLAGS = 
 LIBS          = 
